@@ -8,6 +8,7 @@ public class Conta {
 	private String titular;
 	private float saldo;
 
+// fazer melhorias
 	public Conta(int numero, int agencia, int tipo, String titular, float saldo) {
 		this.numero = numero;
 		this.agencia = agencia;
@@ -56,6 +57,20 @@ public class Conta {
 		this.saldo = saldo;
 	}
 
+	public boolean sacar(float valor) {
+		if (this.saldo < valor)
+			return false;
+
+		this.setSaldo(this.saldo - valor);
+		return true;
+	}
+
+	public void depositar(float valor) {
+
+		this.setSaldo(this.saldo + valor);
+
+	}
+
 	public void visualizar() {
 
 		String tipoConta = "";
@@ -68,15 +83,15 @@ public class Conta {
 			tipoConta = "Conta Poupança";
 			break;
 		}
-		
+
 		System.out.println("--------------------------------------------------");
 		System.out.println("\nDados da Conta\n");
 		System.out.println("--------------------------------------------------");
-		System.out.println("Número da conta: " + getNumero());
-		System.out.println("Agência da conta: " + getAgencia());
+		System.out.println("Número da conta: " + this.numero);
+		System.out.println("Agência da conta: " + this.agencia);
 		System.out.println("Tipo da conta: " + tipoConta);
-		System.out.println("Titular da conta: " + getTitular());
-		System.out.printf("Saldo da conta: R$ %.2f%n", getSaldo());
+		System.out.println("Titular da conta: " + this.titular);
+		System.out.println("Saldo da conta: " + this.saldo);
 
 	}
 }
