@@ -8,7 +8,7 @@ public class Conta {
 	private String titular;
 	private float saldo;
 
-// fazer melhorias
+	// fazer melhorias
 	public Conta(int numero, int agencia, int tipo, String titular, float saldo) {
 		this.numero = numero;
 		this.agencia = agencia;
@@ -91,7 +91,7 @@ public class Conta {
 		System.out.println("Agência da conta: " + this.agencia);
 		System.out.println("Tipo da conta: " + tipoConta);
 		System.out.println("Titular da conta: " + this.titular);
-		System.out.println("Saldo da conta: " + this.saldo);
+		System.out.printf("Saldo da conta: R$ %.2f\n", this.saldo);
 
 	}
 }
