@@ -30,7 +30,7 @@ public class Menu {
 		conta4.visualizar();
 		conta4.depositar(300.0f);
 		conta4.visualizar();
-		
+
 		Scanner sc = new Scanner(System.in);
 
 		int opcao;
@@ -38,11 +38,11 @@ public class Menu {
 		while (true) {
 
 			System.out.println(Cores.TEXT_YELLOW + Cores.ANSI_BLACK_BACKGROUND
-					+ "*****************************************************");
+					+ "-----------------------------------------------------");
 			System.out.println("                                                     ");
-			System.out.println("                BANCO DO BRAZIL COM Z                ");
+			System.out.println("                      RIBANK                         ");
 			System.out.println("                                                     ");
-			System.out.println("*****************************************************");
+			System.out.println("-----------------------------------------------------");
 			System.out.println("                                                     ");
 			System.out.println("            1 - Criar Conta                          ");
 			System.out.println("            2 - Listar todas as Contas               ");
@@ -54,15 +54,14 @@ public class Menu {
 			System.out.println("            8 - Transferir valores entre Contas      ");
 			System.out.println("            9 - Sair                                 ");
 			System.out.println("                                                     ");
-			System.out.println("*****************************************************");
+			System.out.println("-----------------------------------------------------");
 			System.out.println("Entre com a opção desejada:                          ");
 			System.out.println("                                                     " + Cores.TEXT_RESET);
 
 			opcao = sc.nextInt();
 
 			if (opcao == 9) {
-				System.out.println(Cores.TEXT_WHITE_BOLD + "\nBanco do Brazil com Z - O seu Futuro começa aqui!");
-				sobre();
+				System.out.println(Cores.TEXT_WHITE_BOLD + "\nRIBank: Transformando Sonhos em Conquistas, Seu Banco, Seu Futuro!");
 				sc.close();
 				System.exit(0);
 			}
@@ -77,7 +76,7 @@ public class Menu {
 
 				break;
 			case 3:
-				System.out.println(Cores.TEXT_WHITE_BOLD + "Consultar dados da Conta - por número\n\n");
+				System.out.println(Cores.TEXT_WHITE_BOLD + "Consultar dados da Conta por número\n\n");
 
 				break;
 			case 4:
@@ -106,14 +105,6 @@ public class Menu {
 			}
 		}
 
-	}
-
-	public static void sobre() {
-		System.out.println("\n*********************************************************");
-		System.out.println("Projeto Desenvolvido por: ");
-		System.out.println("Generation Brasil - generation@generation.org");
-		System.out.println("github.com/conteudoGeneration");
-		System.out.println("*********************************************************");
 	}
 
 }
