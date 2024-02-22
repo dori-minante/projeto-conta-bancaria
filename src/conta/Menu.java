@@ -1,5 +1,4 @@
 package conta;
-
 import conta.model.Conta;
 
 public class Menu {
