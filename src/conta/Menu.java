@@ -10,34 +10,34 @@ public class Menu {
 
 	public static void main(String[] args) {
 
-		Conta conta1 = new Conta(361345, 452, 1, "Bianca Santos Ribeiro", 18000.0f);
-		conta1.visualizar();
-		conta1.sacar(8000.0f);
-		conta1.visualizar();
+		Conta cc1 = new ContaCorrente(361345, 452, 1, "Bianca Santos Ribeiro", 18000.0f, 20000.0f);
+		cc1.visualizar();
+		cc1.sacar(8000.0f);
+		cc1.visualizar();
 
-		Conta conta2 = new Conta(181309, 432, 2, "João da Silva", 9000.0f);
-		conta2.visualizar();
-		conta2.sacar(450.0f);
-		conta2.visualizar();
-		conta2.depositar(1200.0f);
+		Conta cp1 = new ContaPoupanca(181309, 432, 2, "João da Silva", 9000.0f, 15);
+		cp1.visualizar();
+		cp1.sacar(450.0f);
+		cp1.visualizar();
+		cp1.depositar(1200.0f);
 
-		Conta conta3 = new Conta(381302, 152, 2, "Shakira Ribeiro", 3000.0f);
-		conta3.visualizar();
-		conta3.sacar(57.0f);
-		conta3.visualizar();
+		Conta cp2 = new ContaPoupanca(381302, 152, 2, "Shakira Ribeiro", 3000.0f, 7);
+		cp2.visualizar();
+		cp2.sacar(57.0f);
+		cp2.visualizar();
 
-		Conta conta4 = new Conta(211869, 362, 1, "Everton Duque", 63000.0f);
-		conta4.visualizar();
-		conta4.depositar(300.0f);
-		conta4.visualizar();
+		Conta cc2 = new ContaCorrente(211869, 362, 1, "Everton Duque", 63000.0f, 7500.0f);
+		cc2.visualizar();
+		cc2.depositar(300.0f);
+		cc2.visualizar();
 
 		Scanner sc = new Scanner(System.in);
-
+			
 		int opcao;
 
 		while (true) {
 
-			System.out.println(Cores.TEXT_YELLOW + Cores.ANSI_BLACK_BACKGROUND
+			System.out.println(Cores.TEXT_BLUE + Cores.ANSI_BLACK_BACKGROUND
 					+ "-----------------------------------------------------");
 			System.out.println("                                                     ");
 			System.out.println("                      RIBANK                         ");
@@ -61,7 +61,8 @@ public class Menu {
 			opcao = sc.nextInt();
 
 			if (opcao == 9) {
-				System.out.println(Cores.TEXT_WHITE_BOLD + "\nRIBank: Transformando Sonhos em Conquistas, Seu Banco, Seu Futuro!");
+				System.out.println(
+						Cores.TEXT_WHITE_BOLD + "\nRIBank: Transformando Sonhos em Conquistas, Seu Banco, Seu Futuro!");
 				sc.close();
 				System.exit(0);
 			}
