@@ -1,0 +1,35 @@
+# Arquivos e diretórios específicos do Java
+bin/
+target/
+
+# Arquivos de configuração do Eclipse
+.settings/
+.classpath
+.project
+
+# Arquivos de configuração do IntelliJ
+.idea/
+
+# Arquivos de compilação
+*.class
+*.jar
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+
+# Arquivos de configuração de build
+build/
+out/
+
+# Arquivos gerados durante a execução
+gen/
+
+# Dependências do Maven
+/.mvn/
+*.iml
+target/
+ 
+# Arquivos de configuração do Gradle
+.gradle/
+build/
