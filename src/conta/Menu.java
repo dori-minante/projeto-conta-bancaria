@@ -18,9 +18,9 @@ public class Menu {
 
 		Scanner sc = new Scanner(System.in);
 
-		int opcao, numero, agencia, tipo, aniversario;
+		int opcao, numero = 0, agencia, tipo, aniversario, numeroDestino;
 		String titular;
-		float saldo, limite;
+		float saldo, limite, valor;
 
 		System.out.println("\nCriar contas\n");
 
@@ -41,7 +41,7 @@ public class Menu {
 
 		while (true) {
 
-			System.out.println(Cores.TEXT_BLUE + Cores.ANSI_BLACK_BACKGROUND
+			System.out.println(Cores.TEXT_BLUE + Cores.ANSI_YELLOW_BACKGROUND
 					+ "-----------------------------------------------------");
 			System.out.println("                                                     ");
 			System.out.println("                      RIBANK                         ");
@@ -84,7 +84,6 @@ public class Menu {
 				sc.nextLine();
 
 				System.out.println("Digite o nome do titular: ");
-				// sc.skip("\\R:");
 				titular = sc.nextLine();
 
 				do {
@@ -109,7 +108,6 @@ public class Menu {
 				} else {
 					System.out.println("Tipo de conta inválido! Tente novamente.");
 				}
-
 				keyPress();
 
 			case 2:
@@ -158,10 +156,8 @@ public class Menu {
 						System.out.println("Tipo de conta inválido!");
 					}
 
-									
 				} else
 					System.out.println("\nConta não encontrada!");
-
 				keyPress();
 				break;
 
@@ -174,14 +170,43 @@ public class Menu {
 				break;
 			case 6:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Saque\n\n");
+				System.out.println("Digite o número da conta: ");
+				numero = sc.nextInt();
+
+				do {
+					System.out.println("Digite o valor do saque R$ ");
+					valor = sc.nextFloat();
+				} while (valor <= 0);
+
+				contas.sacar(numero, valor);
 				keyPress();
 				break;
 			case 7:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Depósito\n\n");
+				System.out.println("Digite o número da conta: ");
+				numero = sc.nextInt();
+
+				do {
+					System.out.println("Digite o valor do depósito R$ ");
+					valor = sc.nextFloat();
+				} while (valor <= 0);
+
+				contas.depositar(numero, valor);
 				keyPress();
 				break;
 			case 8:
 				System.out.println(Cores.TEXT_WHITE_BOLD + "Transferência entre Contas\n\n");
+				System.out.println("Digite o número da conta de origem: ");
+				numero = sc.nextInt();
+				System.out.println("Digite o número da conta de destino: ");
+				numeroDestino = sc.nextInt();
+
+				do {
+					System.out.println("Digite o valor da transferência R$ ");
+					valor = sc.nextFloat();
+				} while (valor <= 0);
+
+				contas.transferir(numero, numeroDestino, valor);
 				keyPress();
 				break;
 			default:

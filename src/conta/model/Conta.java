@@ -64,9 +64,10 @@ public abstract class Conta {
 		return true;
 	}
 
-	public void depositar(float valor) {
+	public boolean depositar(float valor) {
 
 		this.setSaldo(this.saldo + valor);
+		return false;
 
 	}
 
